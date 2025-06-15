@@ -1,0 +1,31 @@
+# Ignore by default to avoid no wished files
+**/*
+
+# Add base directory files
+!LICENSE
+!README.md
+!Makefile
+!.gitignore
+!.dockerignore
+!pyproject.toml
+.venv
+.env
+.envrc
+
+# Add source code
+# TODO Update according to your module name
+!/hello_world
+!/hello_world/**/*.py
+
+# Add tests
+!/test
+!/test/**
+!/test/**/*
+
+# Add docs
+!/docs
+!/docs/**/*
+
+# Ignore cache generated
+/**/__pycache__
+
