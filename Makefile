@@ -36,7 +36,13 @@ run:  ## Execute hello_world
 test:  ## Run tests
 	source .venv/bin/activate; python3 -m pytest
 
+.PHONY: test-cov
+test-cov:  ## Get coverage report
+	source .venv/bin/activate; python3 -m \
+	  pytest --cov=${MODULE}
+
 .PHONY: doc
 doc:  ## Generate documentation from the source code
 	# TODO Update your module name
 	source .venv/bin/activate; pdoc3 --force -o docs/ "${MODULE}"
+
