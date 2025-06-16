@@ -12,6 +12,11 @@
 .env
 .envrc
 
+# Add .github directory
+!.github
+!.github/**
+!.github/**/*
+
 # Add source code
 # TODO Update according to your module name
 !/hello_world
