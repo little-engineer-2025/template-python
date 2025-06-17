@@ -10,6 +10,9 @@ jobs:
         python-version: ["pypy3.10", "3.9", "3.10", "3.11", "3.12", "2.13"]
         architecture: ["x64", "arm64"]
     steps:
+      - name: Install poetry
+        run:
+          pipx install poetry==2.0.0
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
