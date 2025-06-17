@@ -12,9 +12,8 @@ all: format lint doc test
 
 .PHONY: deps
 deps: .venv  ## Install dependencies in a python virtual environment
-	source .venv/bin/activate; pip install -U pip
-	source .venv/bin/activate; pip install poetry
-	source .venv/bin/activate; python3 -m poetry install
+	source .venv/bin/activate; python3 -m poetry install --no-root
+	source .venv/bin/activate; python3 -m poetry install --with=dev
 
 .venv:
 	python3 -m venv .venv
