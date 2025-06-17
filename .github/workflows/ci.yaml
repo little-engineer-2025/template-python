@@ -23,7 +23,6 @@ jobs:
         run: |
           poetry install --no-root
           poetry install --group=dev
-      -
 
   install-deps:
     runs-on: ubuntu-latest
