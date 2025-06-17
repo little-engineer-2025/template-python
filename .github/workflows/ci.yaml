@@ -32,9 +32,9 @@ jobs:
         python-version: ["pypy3.10", "3.9", "3.10", "3.11", "3.12", "2.13"]
         architecture: ["x64", "arm64"]
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: ${{ matrix.python-version }}
-        python-version: ${{ matrix.python-version }}
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: ${{ matrix.python-architecture }}
