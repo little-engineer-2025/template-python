@@ -8,5 +8,6 @@ import logging
 
 def log_setup(args):
     """Setup python logs"""
-    if args.verbose:
+    logging.basicConfig(level=logging.INFO)
+    if args.is_verbose:
         logging.basicConfig(level=logging.DEBUG)
