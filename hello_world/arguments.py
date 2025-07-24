@@ -9,6 +9,9 @@ import argparse
 def parser():
     """parser Configure the argument parser and return it"""
     p = argparse.ArgumentParser()
+    p.add_argument(
+        "--verbose", action="store_true", dest="is_verbose", help="Verbose logs"
+    )
     subparsers = p.add_subparsers(
         dest="subcommand", title="subcommand", description="The subcommand to run"
     )
@@ -26,13 +29,13 @@ def parser():
     # Run subcommand
     run_parser = subparsers.add_parser("run", help="Run something")
     run_parser.add_argument(
-        "--verbose", action="store_true", dest="verbose", help="Verbose execution"
+        "--verbose", action="store_true", dest="is_verbose", help="Verbose execution"
     )
 
     return p
 
 
 def parse(the_parser):
-    """Retrive a new argument parser and extract the arguments"""
+    """Retrieve a new argument parser and extract the arguments"""
     args = the_parser.parse_args()
     return args
