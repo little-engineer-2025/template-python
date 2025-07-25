@@ -26,6 +26,11 @@
 !/docs
 !/docs/**/*
 
+# Add scripts
+!/scripts
+!/scripts/**
+!/scripts/**/*
+
 # Ignore cache generated
 /**/__pycache__
 
