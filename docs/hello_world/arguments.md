@@ -6,7 +6,7 @@ Functions
 ---------
 
 `parse(the_parser)`
-:   Retrive a new argument parser and extract the arguments
+:   Retrieve a new argument parser and extract the arguments
 
 `parser()`
 :   parser Configure the argument parser and return it
