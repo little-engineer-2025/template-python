@@ -10,27 +10,35 @@ def parser():
     """parser Configure the argument parser and return it"""
     p = argparse.ArgumentParser()
     p.add_argument(
-        "--verbose", action="store_true", dest="is_verbose", help="Verbose logs"
+        "--verbose",
+        action="store_true",
+        dest="is_verbose",
+        help="Verbose logs",
+        default=False,
     )
-    subparsers = p.add_subparsers(
-        dest="subcommand", title="subcommand", description="The subcommand to run"
-    )
+
+    # TODO Left on purpose as part of the template to help to the developer
+    #      to extend based on their requirements.
+
+    # subparsers = p.add_subparsers(
+    #     dest="subcommand", title="subcommand", description="The subcommand to run"
+    # )
 
     # Install subcommand
-    install_parser = subparsers.add_parser("install", help="Install something")
-    install_parser.add_argument(
-        "--force", action="store_true", help="Force installation"
-    )
+    # install_parser = subparsers.add_parser("install", help="Install something")
+    # install_parser.add_argument(
+    #     "--force", action="store_true", help="Force installation"
+    # )
 
     # Remove subcommand
-    remove_parser = subparsers.add_parser("remove", help="Remove something")
-    remove_parser.add_argument("--force", action="store_true", help="Force removal")
+    # remove_parser = subparsers.add_parser("remove", help="Remove something")
+    # remove_parser.add_argument("--force", action="store_true", help="Force removal")
 
     # Run subcommand
-    run_parser = subparsers.add_parser("run", help="Run something")
-    run_parser.add_argument(
-        "--verbose", action="store_true", dest="is_verbose", help="Verbose execution"
-    )
+    # run_parser = subparsers.add_parser("run", help="Run something")
+    # run_parser.add_argument(
+    #     "--verbose", action="store_true", dest="is_verbose", help="Verbose execution"
+    # )
 
     return p
 
